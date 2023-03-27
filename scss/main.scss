@@ -1,6 +1,7 @@
 // codul pentru componentele din styleguide: background-box, filters, people-layout...
 @import 'base/reset';
 @import '../node_modules/bootstrap/scss/bootstrap-grid.scss';
+@import '../node_modules/breakpoint-sass/stylesheets/breakpoint';
 @import 'base/variables';
 @import 'base/mixins';
 @import 'components/backround-box';
@@ -8,4 +9,6 @@
 @import 'components/people-layout';
 @import 'components/filters';
 @import 'components/gradients';
+@import 'components/ratio-box';
 @import 'components/transform';
+
