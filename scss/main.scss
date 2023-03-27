@@ -8,19 +8,4 @@
 @import 'components/people-layout';
 @import 'components/filters';
 @import 'components/gradients';
-
-.header {
-  @include fix-inline-blocks(20px);
-}
-
-aside {
-  @include fix-inline-blocks();
-}
-
-footer {
-  @include fix-inline-blocks(30px);
-}
-
-section {
-  @include fix-inline-blocks(50px);
-}
+@import 'components/transform';
