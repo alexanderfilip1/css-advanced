@@ -1,0 +1,420 @@
+.transform-action-area--1 {
+  &:hover {
+    .transform-element {
+      transform: scaleY(0.5);
+    }
+  }
+}
+
+.transform-action-area--2 {
+  &:hover {
+    .transform-element {
+      transform: rotate(50deg);
+      background-color: yellow;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.transform-action-area--3 {
+  &:hover {
+    .transform-element {
+      transform: skew(180deg, -10deg);
+      background-color: blue;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.transform-action-area--4 {
+  &:hover {
+    .transform-element {
+      transform: skewY(10deg);
+      background-color: yellow;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.transform-action-area--5 {
+  &:hover {
+    .transform-element {
+      transform: translateX(50%);
+      background-color: yellow;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.transform-action-area--6 {
+  &:hover {
+    .transform-element {
+      transform: scale(2, 0.5);
+      background-color: yellow;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.transform-action-area--7 {
+  &:hover {
+    .transform-element {
+      transform: rotate(0.5turn);
+      background-color: yellow;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.transform-action-area--8 {
+  &:hover {
+    .transform-element {
+      transform: skewY(1.07rad);
+      background-color: yellow;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.transform-action-area--9 {
+  &:hover {
+    .transform-element {
+      transform: translateX(10px) rotate(270deg) translateY(5px);
+      background-color: yellow;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.transform-action-area--10 {
+  &:hover {
+    .transform-element {
+      transform: translate3d(30px, 30px, 30px); 
+      background-color: yellow;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.transform-action-area--11 {
+  &:hover {
+    .transform-element {
+      transform: translateX(50%);
+      background-color: yellow;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.transform-action-area--12 {
+  &:hover {
+    .transform-element {
+      transform: rotateX(180deg) rotateY(120deg);
+      background-color: yellow;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.transform-action-area--13 {
+  &:hover {
+    .transform-element {
+      transform: skew(50deg, -25deg);
+      background-color: gold;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.transform-action-area--14 {
+  &:hover {
+    .transform-element {
+      transform: rotate(-50deg) rotateX(50deg);
+      background-color: yellow;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.transform-action-area--15 {
+  &:hover {
+    .transform-element {
+      transform: perspective(500px) translate(10px, 0, 20px) rotateY(3deg);
+      background-color: yellow;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.transform-action-area--16 {
+  &:hover {
+    .transform-element {
+      transform: rotateZ(10deg);
+      background-color: yellow;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.transform-action-area--17 {
+  &:hover {
+    .transform-element {
+      transform: rotate3d(1, 2, 3, 10deg);
+      background-color: yellow;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.transform-action-area--18 {
+  &:hover {
+    .transform-element {
+      transform: matrix(1, 2, 3, 4, 5, 6);
+      background-color: yellow;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.transform-action-area--19 {
+  &:hover {
+    .transform-element {
+      transform: translateX(2em);
+      background-color: yellow;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.transform-action-area--20 {
+  &:hover {
+    .transform-element {
+      transform: none;
+      background-color: hotpink;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.transform-element {
+  width: 100%;
+  height: 300px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.scene {
+  width: 200px;
+  height: 260px;
+  border: 1px solid #CCC;
+  margin: 40px 0;
+  perspective: 600px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+
+  &.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+  }
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 260px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background: red;
+}
+
+.card__face--back {
+  background: blue;
+  transform: rotateY(180deg);
+}
+
+
+.scene--box {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #CCC;
+  margin: 80px;
+  perspective: 400px;
+}
+
+.box {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-50px);
+  transition: transform 1s;
+
+  &.show-front {
+    transform: translateZ(-50px) rotateY(0deg);
+  }
+
+  &.show-back {
+    transform: translateZ(-50px) rotateY(-180deg);
+  }
+
+  &.show-right {
+    transform: translateZ(-150px) rotateY(-90deg);
+  }
+
+  &.show-left {
+    transform: translateZ(-150px) rotateY(90deg);
+  }
+
+  &.show-top {
+    transform: translateZ(-100px) rotateX(-90deg);
+  }
+
+  &.show-bottom {
+    transform: translateZ(-100px) rotateX(90deg);
+  }
+}
+
+.box__face {
+  position: absolute;
+  border: 2px solid black;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.box__face--front, .box__face--back {
+  width: 300px;
+  height: 200px;
+  line-height: 200px;
+}
+
+.box__face--right, .box__face--left {
+  width: 100px;
+  height: 200px;
+  left: 100px;
+  line-height: 200px;
+}
+
+.box__face--top, .box__face--bottom {
+  width: 300px;
+  height: 100px;
+  top: 50px;
+  line-height: 100px;
+}
+
+.box__face--front {
+  background: hsla(0, 100%, 50%, 0.7);
+}
+
+.box__face--right {
+  background: hsla(60, 100%, 50%, 0.7);
+}
+
+.box__face--back {
+  background: hsla(120, 100%, 50%, 0.7);
+}
+
+.box__face--left {
+  background: hsla(180, 100%, 50%, 0.7);
+}
+
+.box__face--top {
+  background: hsla(240, 100%, 50%, 0.7);
+}
+
+.box__face--bottom {
+  background: hsla(300, 100%, 50%, 0.7);
+}
+
+.box__face--front {
+  transform: rotateY(0deg) translateZ(50px);
+}
+
+.box__face--back {
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.box__face--right {
+  transform: rotateY(90deg) translateZ(150px);
+}
+
+.box__face--left {
+  transform: rotateY(-90deg) translateZ(150px);
+}
+
+.box__face--top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+.box__face--bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+label {
+  margin-right: 10px;
+}
+/*
+
+  transform: scale(0.5) - scaleaza (schimba dimensiunea boxei) in dependenta de coeficient
+  transform: scaleX(0.5) - scaleaza (schimba dimensiunea boxei) in dependenta de coeficient, pe axa X
+  transform: scaleY(0.5) - scaleaza (schimba dimensiunea boxei) in dependenta de coeficient, pe axa Y
+  transform: scaleZ(0.5) - scaleaza (schimba dimensiunea boxei) in dependenta de coeficient, pe axa Z
+  transform: translate(30px, 30px) - muta (schimba pozitionarea) boxei pe ambele axe
+  transform: translate3d(30px, 30px, 30px) - muta (schimba pozitionarea) boxei pe toate 3 axe
+  transform: translateX(50%) - muta (schimba pozitionarea) boxei pe axa X
+  transform: translateY(50%) - muta (schimba pozitionarea) boxei pe axa Y
+  transform: translateZ(50%) - muta (schimba pozitionarea) boxei pe axa Z
+  transform: rotate(90deg) - roteste boxa cu X grade pe axa Z
+  transform: rotateX(90deg) - roteste boxa cu X grade pe axa X
+  transform: rotateY(90deg) - roteste boxa cu X grade pe axa Y
+  transform: rotateZ(90deg) - roteste boxa cu X grade pe axa Z
+  transform: skew(90deg, -90deg) - distortioneaza boxa cu X grade inclinare pe ambele axe
+  transform: skewX(90deg) - distortioneaza boxa cu X grade inclinare pe axa X
+  transform: skewY(90deg) - distortioneaza boxa cu X grade inclinare pe axa Y
+  transform: skewZ(90deg) - distortioneaza boxa cu X grade inclinare pe axa Z
+  transform: perspective(30px) - seteaza distanta pana la ecranul utilizatorului pentru a crea perpectiva 3d
+  perspective: 500px - determina distanta de la punctul axe z = 0 pana la ecranul tau. Ofera "perpectiva" unei scene 3d
+  perspective-origin: top left - determina de unde incepem numaratoarea distantei perspective fata de obiect
+  transform-style: flat sau preserve-3d - permite sau nu vizualizarea in 3d
+  perpective-origin: top left - determina de unde incepem transformarea (exemplu: batutul in cuie a punctului central in jurul careia facem rotate)
+  backface-visibility: hidden sau visible - determina daca partea din spate a unui 3d obiect se stravede sau nu
+
+
+*/ 
