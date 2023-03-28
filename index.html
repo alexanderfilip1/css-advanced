@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/styleguide.css">
 </head>
@@ -16,12 +17,36 @@
     <aside class="sidebar">
       aside
       <ul>
-        <li><a href="#background-box">Background Box</a></li>
-        <li><a href="#people-layout">People Layout</a></li>
         <li><a href="#filters">Filters</a></li>
+        <li><a href="#gradients">Gradients</a></li>
+        <li><a href="#responsive-image">Responsive Image</a></li>
+        <li><a href="#transform">Transform</a></li>
+        <li><a href="#animation">Animation</a></li>
       </ul>
     </aside>
     <content class="content-area">
+      <div class="section" id="transition">
+        <div class="container">
+          <h2 class="section__content">Transition (hover to apply)</h2>
+        </div>
+        <div class="section__content">
+          <div class="transition-area">
+            <!--<div class="transition-child"><i class='fas fa-truck-pickup' style='font-size:50px;'></i></div> --> 
+            <div class="transition-child transition-child--1 fas fa-truck-pickup"></div>
+            <div class="transition-child transition-child--2 fas fa-car-side"></div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="animation">
+        <div class="container">
+          <h2 class="section__content">Animation (hover to apply)</h2>
+        </div>
+        <div class="section__content">
+          <div class="animation-area">
+            <div class="animation-child"></div>
+          </div>
+        </div>
+      </div>
       <div class="section" id="transform">
         <div class="container">
           <h2 class="section__content">Transform(hover boxes to apply)</h2>
@@ -328,6 +353,35 @@
     changeSide();
 
     radioGroup.addEventListener( 'change', changeSide );
+  </script>
+  <script>
+    // Obțineți elementul pentru jocul de șarpe
+const snakeGame = document.querySelector('.snake-game');
+// Obțineți elementul pentru șarpe
+const snake = document.querySelector('.snake');
+// Setăm poziția inițială a șarpelui
+let snakeX = 0;
+let snakeY = 0;
+// Adăugați evenimentul keydown pentru a detecta mișcarea șarpelui
+document.addEventListener('keydown', function(event) {
+  switch(event.keyCode) {
+    case 37: // Arrow Left
+      snakeX -= 20;
+      break;
+    case 38: // Arrow Up
+      snakeY -= 20;
+      break;
+    case 39: // Arrow Right
+      snakeX += 20;
+      break;
+    case 40: // Arrow Down
+      snakeY += 20;
+      break;
+  }
+  
+  // Actualizați poziția șarpelui
+  snake.style.transform = `translate(${snakeX}px, ${snakeY}px)`;
+});
   </script>
 </body>
 </html>

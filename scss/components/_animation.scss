@@ -1,0 +1,108 @@
+@keyframes sasha {
+  0% {
+    left: 0;
+    top: 0;
+    background-color: green;
+  }
+  10% {
+    left: calc(100% - 50px);
+    top: 0;
+    background-color: blue;
+  }
+  15% {
+    left: calc(100% - 50px);
+    top: 100px;
+    background-color: blue;
+  }
+
+  20% {
+    left: 0;
+    top: 100px;
+  }
+  25% {
+    left: 0;
+    top: 200px;
+  }
+
+  30% {
+    left: calc(100% - 50px);
+    top: 200px;
+  }
+  35% {
+    left: calc(100% - 50px);
+    top: 300px;
+  }
+  40% {
+    left: 0;
+    top: 300px;
+  }
+  45% {
+    left: calc(100% - 50px);
+    top: 300px;
+  }
+  50% {
+    left: calc(100% - 50px);
+    top: 200px;
+  }
+  55% {
+    left: 0;
+    top: 200px;
+  }
+  60% {
+    left: 0;
+    top: 100px;
+  }
+  65% {
+    left: calc(100% - 50px);
+    top: 100px;
+  }
+  70% {
+    left: calc(100% - 50px);
+    top: 0;
+  }
+}
+.animation-area {
+  background-color: #ccc;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    padding-top: 20%;
+  }
+
+  &:hover {
+    .animation-child {
+      animation-play-state: running;
+      animation-name: sasha;
+    }
+  }
+
+}
+
+.animation-child {
+  width: 50px;
+  height: 50px;
+  background: #f00;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  
+}
+
+
+/*
+  animation-name: <denumirea animatiei dorite>
+  animation-duration: <timp> in secunde sau millisecunde - cât timp să dureze animația
+  animation-iteration-count: <cifra> - numarul de cate ori sa ruleze animatia
+  animation-timing-function: ease || ease-in  || ease-in-out || ease-out || steps() || cubic-bezier() - functii de derulare \ accelerare a animațiilor
+  animation-play-state: running || paused - starea de moment a animatiei, daca trebuie oprita sau nu
+  animation-direction: normal || reverse || alternate || alternate-reverse - indica directia / modul in care animatia deruleaza odata ce ia sfârșit
+  animation-fill-mode: none(d) || forwards || backwards || both
+    - none: 
+    - forwards:
+    - backwards:
+    - both: 
+*/ 
