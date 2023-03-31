@@ -1,0 +1,62 @@
+.transition-area {
+  background-image: url(/images/road2.jpg);
+  position: relative;
+  object-fit: cover;
+
+  &::after {
+    content: '';
+    display: block;
+    padding-top: 20%;
+  }
+
+  &:hover {
+    .transition-child {
+      left: calc(100% - 50px);
+    }
+  &:hover {
+    .transition-child--1 {
+      left: calc(100% - 50px);
+    }
+  }
+}
+
+.transition-child {
+  position: absolute;
+  top: 250px;
+  left: 0;
+  transition: left 2s linear 0s, background-color 2s linear 2s, opacity 2s linear 4s;
+}
+
+.transition-child--1 {
+  position: absolute;
+  top: 250px;
+  left: 0;
+  transition: left 2s, linear 1s, linear 2s;
+  transition-timing-function: ease-in;
+  font-size: 40px;
+}
+
+.transition-child--2 {
+  position: absolute;
+  top: 290px;
+  left: 0;
+  transition: left 2s linear 0s, linear 2s, opacity 2s linear 4.5s;
+  font-size: 40px;
+}
+
+.transition-child--3 {
+  top: 200px;
+}
+
+.transition-child--4 {
+  top: 300px;
+}
+
+}
+
+/*
+  transition-property: all || margin || width || left || background-color || etc etc - CSS proprietati pe care vrem sa aplicam tranzitia lentă?
+  transition-duration: <timp> - in secunde sau millisecunde, cat timp dureaza tranzitia
+  transition-timing-function: ease || ease-in  || ease-in-out || ease-out || steps() || cubic-bezier() - functii de derulare \ accelerare a tranzitiilor
+  transition-delay: <timp> - in secunde sau millisecunde, cat timp amânăm tranzitia
+*/
